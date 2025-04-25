@@ -1,4 +1,4 @@
-# Nova - 3D Animated Gaming Website
+# 3D Scuffed Gaming Website
 
 ![Nova - 3D Animated Gaming Website](/.github/images/img_main.png "Nova - 3D Animated Gaming Website")
 
