@@ -30,17 +30,12 @@ export const About = () => {
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
         <p className="font-general text-sm uppercase md:text-[10px]">
-          Welcome to our
+          Welcome to our Adventure
         </p>
 
         <AnimatedTitle containerClass="mt-5 !text-black text-center">
           {"Disc<b>o</b>ver a shared adventure"}
         </AnimatedTitle>
-
-        <div className="about-subtext">
-          <p>The Game of Games begins-your life, now an epic MMORPG</p>
-          <p>Zentry unites every player from countless games and platforms</p>
-        </div>
       </div>
 
       <div className="h-dvh w-screen" id="clip">
