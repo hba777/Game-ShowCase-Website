@@ -34,7 +34,7 @@ export const About = () => {
         </p>
 
         <AnimatedTitle containerClass="mt-5 !text-black text-center">
-          {"Disc<b>o</b>ver a shared adventure"}
+          {"Experience the epic Western adventures that defined a generation"}
         </AnimatedTitle>
       </div>
 
