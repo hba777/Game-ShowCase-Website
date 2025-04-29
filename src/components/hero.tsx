@@ -9,33 +9,33 @@ export const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [loadedImages, setLoadedImages] = useState(0);
+  const [loadedVideos, setLoadedVideos] = useState(0);
 
-  const nextImageRef = useRef<HTMLImageElement>(null);
+  const nextVideoRef = useRef<HTMLVideoElement>(null);
 
-  const totalImages = 4;
-  const upcomingImageIndex = (currentIndex % totalImages) + 1;
+  const totalVideos = 4;
+  const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
 
-  const handleMiniImageClick = () => {
+  const handleMiniVideoClick = () => {
     setHasClicked(true);
-    setCurrentIndex(upcomingImageIndex);
+    setCurrentIndex(upcomingVideoIndex);
   };
 
-  const getImageSrc = (i: number) => `/videos/animations/hero-${i}.gif`;
+  const getVideoSrc = (i: number) => `/videos/animations/hero-${i}.mp4`;
 
-  const handleImageLoad = () => {
-    setLoadedImages((prev) => prev + 1);
+  const handleVideoLoad = () => {
+    setLoadedVideos((prev) => prev + 1);
   };
 
   useEffect(() => {
-    if (loadedImages === totalImages - 1) setIsLoading(false);
-  }, [loadedImages]);
+    if (loadedVideos === totalVideos - 1) setIsLoading(false);
+  }, [loadedVideos]);
 
   useGSAP(() => {
     if (hasClicked) {
-      gsap.set("#next-image", { visibility: "visible" });
+      gsap.set("#next-video", { visibility: "visible" });
 
-      gsap.to("#next-image", {
+      gsap.to("#next-video", {
         transformOrigin: "center center",
         scale: 1,
         width: "100%",
@@ -44,7 +44,7 @@ export const Hero = () => {
         ease: "power1.inOut",
       });
 
-      gsap.from("#current-image", {
+      gsap.from("#current-video", {
         transformOrigin: "center center",
         scale: 0,
         duration: 1.5,
@@ -54,17 +54,17 @@ export const Hero = () => {
   }, { dependencies: [currentIndex], revertOnUpdate: true });
 
   useGSAP(() => {
-    gsap.set("#image-frame", {
+    gsap.set("#video-frame", {
       clipPath: "polygon(14% 0%, 72% 0%, 90% 90%, 0% 100%)",
       borderRadius: "0 0 40% 10%",
     });
 
-    gsap.from("#image-frame", {
+    gsap.from("#video-frame", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       borderRadius: "0 0 0 0",
       ease: "power1.inOut",
       scrollTrigger: {
-        trigger: "#image-frame",
+        trigger: "#video-frame",
         start: "center center",
         end: "bottom center",
         scrub: true,
@@ -85,45 +85,54 @@ export const Hero = () => {
       )}
 
       <div
-        id="image-frame"
+        id="video-frame"
         className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
       >
         <div>
-          {/* Mini clickable image */}
+          {/* Mini clickable video */}
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
             <div
-              onClick={handleMiniImageClick}
+              onClick={handleMiniVideoClick}
               className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
             >
-              <img
-                ref={nextImageRef}
-                src={getImageSrc(upcomingImageIndex)}
-                id="current-image"
+              <video
+                ref={nextVideoRef}
+                src={getVideoSrc(upcomingVideoIndex)}
+                id="current-video"
                 className="size-64 origin-center scale-150 object-cover object-center"
-                onLoad={handleImageLoad}
-                alt="Current GIF"
+                onLoadedData={handleVideoLoad}
+                autoPlay
+                muted
+                loop
+                playsInline
               />
             </div>
           </div>
 
-          {/* Image that appears after click */}
-          <img
-            ref={nextImageRef}
-            src={getImageSrc(currentIndex)}
-            id="next-image"
+          {/* Video that appears after click */}
+          <video
+            ref={nextVideoRef}
+            src={getVideoSrc(currentIndex)}
+            id="next-video"
             className="absolute-center invisible absolute z-20 size-64 object-cover object-center"
-            onLoad={handleImageLoad}
-            alt="Next GIF"
+            onLoadedData={handleVideoLoad}
+            autoPlay
+            muted
+            loop
+            playsInline
           />
 
-          {/* Main full background image */}
-          <img
-            src={getImageSrc(
-              currentIndex === totalImages - 1 ? 1 : currentIndex
+          {/* Main full background video */}
+          <video
+            src={getVideoSrc(
+              currentIndex === totalVideos - 1 ? 1 : currentIndex
             )}
             className="absolute left-0 top-0 size-full object-cover object-center"
-            onLoad={handleImageLoad}
-            alt="Main background GIF"
+            onLoadedData={handleVideoLoad}
+            autoPlay
+            muted
+            loop
+            playsInline
           />
         </div>
 
