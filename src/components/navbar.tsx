@@ -53,7 +53,10 @@ export const Navbar = () => {
     });
   }, [isNavVisible]);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     e.preventDefault();
     const targetElement = document.querySelector(href);
     if (targetElement) {
@@ -71,19 +74,17 @@ export const Navbar = () => {
     >
       <div className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
-          <div className="flex items-center gap-7">
-            
-          </div>
+          <div className="flex items-center gap-7"></div>
 
           <div className="flex h-full items-center">
             <div className="hidden md:block">
               {NAV_ITEMS.map(({ label, href }) => (
-                <a 
-                key={href} 
-                href={href} 
-                className="nav-hover-btn"
-                onClick={(e) => handleNavClick(e, href)}
-              >
+                <a
+                  key={href}
+                  href={href}
+                  className="nav-hover-btn"
+                  onClick={(e) => handleNavClick(e, href)}
+                >
                   {label}
                 </a>
               ))}
