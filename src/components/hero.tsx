@@ -77,7 +77,7 @@ export const Hero = () => {
 
   return (
     <section id="hero" className="relative h-dvh w-screen overflow-x-hidden">
-      {!isVideoLoaded && (
+      {isLoading && (
         <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
           <div className="three-body">
             <div className="three-body__dot" />
