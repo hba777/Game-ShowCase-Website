@@ -1,5 +1,4 @@
 import { PropsWithChildren, useRef, useState } from "react";
-import { TiLocationArrow } from "react-icons/ti";
 
 interface BentoTiltProps {
   className?: string;
