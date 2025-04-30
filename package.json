@@ -10,7 +10,8 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d build"
   },
   "author": {
     "name": "Sanidhya Kumar Verma",
@@ -49,7 +50,7 @@
     "type": "git",
     "url": "https://github.com/sanidhyy/game-website.git"
   },
-  "homepage": "https://github.com/sanidhyy/game-website#readme",
+  "homepage": "https://github.com/hba777/Game-ShowCase-Website",
   "bugs": {
     "url": "https://github.com/sanidhyy/game-website/issues",
     "email": "sanidhya.verma12345@gmail.com"
@@ -83,6 +84,7 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
+    "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
     "postcss": "^8.4.49",
     "prettier": "^3.4.1",
