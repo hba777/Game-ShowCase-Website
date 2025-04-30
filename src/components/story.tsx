@@ -81,8 +81,11 @@ export const Story = () => {
         <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
           <div className="flex h-full w-fit flex-col items-center md:items-start">
             <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
-              Where realms converge, lies Zentry the boundless pillar. Discover
-              its secrets and shape your fate amidst infinite opportunities.
+              Set in the dying days of the Wild West, follow Arthur Morgan and
+              the Van der Linde gang as they fight for survival against ruthless
+              bounty hunters, the law, and their own fading ideals. In a world
+              of betrayal, loyalty, and redemption, their story becomes one of
+              the most epic and tragic tales ever told.
             </p>
 
             <Button id="realm-button" containerClass="mt-5">
