@@ -9,5 +9,5 @@ export default defineConfig({
       "@": "/src",
     },
   },
-  base: "/Game-ShowCase-Website/", // Add this line for GitHub Pages
+  base: "/Game-ShowCase-Website/",
 });
