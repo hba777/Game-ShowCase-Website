@@ -5,6 +5,7 @@ import { useWindowScroll } from "react-use";
 
 import { LINKS, NAV_ITEMS } from "@/constants";
 import { cn } from "@/lib/utils";
+import { Moon, Sun } from "lucide-react"; // or use any icon set you like
 
 export const Navbar = () => {
   const navContainerRef = useRef<HTMLDivElement>(null);
@@ -14,6 +15,27 @@ export const Navbar = () => {
   const [isIndicatorActive, setIsIndicatorActive] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isNavVisible, setIsNavVisible] = useState(false);
+
+  const [isDarkMode, setIsDarkMode] = useState(() =>
+    document.documentElement.classList.contains("dark")
+  );
+
+  const toggleTheme = () => {
+    const isDark = document.documentElement.classList.toggle("dark");
+    setIsDarkMode(isDark);
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  };
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      setIsDarkMode(true);
+    } else {
+      document.documentElement.classList.remove("dark");
+      setIsDarkMode(false);
+    }
+  }, []);
 
   const { y: currentScrollY } = useWindowScroll();
 
@@ -125,6 +147,17 @@ export const Navbar = () => {
               >
                 <FaGithub className="size-5 text-white" />
               </a>
+              <button
+                onClick={toggleTheme}
+                className="p-2 transition hover:opacity-75"
+                title="Toggle Theme"
+              >
+                {isDarkMode ? (
+                  <Sun className="size-5 text-yellow-400" />
+                ) : (
+                  <Moon className="size-5 text-gray-800" />
+                )}
+              </button>
             </div>
           </div>
         </nav>

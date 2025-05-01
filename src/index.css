@@ -7,9 +7,16 @@
 body {
   width: 100dvw;
   overflow-x: hidden;
-  background-color: #ffffff;
+  /* Set default background and font */
+  background-color: #ffffff; /* Light mode default */
   font-family: "General Sans", sans-serif;
 }
+
+body.dark {
+  background-color: #0f0f0f; /* Dark mode background */
+  color: #f5f5f5; /* Dark mode text color */
+}
+
 
 @layer base {
   @font-face {
@@ -144,7 +151,7 @@ body {
 }
 
 .indicator-line {
-  @apply h-[4px] w-px rounded-full bg-white transition-all duration-200 ease-in-out;
+  @apply h-[4px] w-px rounded-full bg-light-background dark:bg-dark-background transition-all duration-200 ease-in-out;
 }
 
 .indicator-line.active {

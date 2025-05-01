@@ -59,14 +59,15 @@ const BentoCard = ({ src, title, description }: BentoCardProps) => {
         alt="Feature"
         className="absolute left-0 top-0 size-full object-cover object-center"
       />
-      <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
+      <div className="relative z-10 flex size-full flex-col justify-between p-5 text-light-foreground dark:text-dark-foreground">
         <div>
-          <h1 className="bento-title special-font font-bold text-white">
+          <h1 className="bento-title special-font font-bold text-light-foreground dark:text-dark-foreground">
             {title}
-          </h1>{" "}
-          {/* Added font-bold and text-white classes here */}
+          </h1>
           {description && (
-            <p className="mt-3 max-w-64 text-xl md:text-base">{description}</p>
+            <p className="mt-3 max-w-64 text-xl md:text-base text-light-foreground dark:text-dark-foreground">
+              {description}
+            </p>
           )}
         </div>
       </div>
@@ -76,10 +77,10 @@ const BentoCard = ({ src, title, description }: BentoCardProps) => {
 
 export const Features = () => {
   return (
-    <section className="bg-black pb-52">
+    <section className="bg-light-background dark:bg-dark-background pb-52">
       <div className="container mx-auto px-3 md:px-10">
-        <div className="px-5 py-32">
-          <p className="font-circular-web text-lg text-blue-50">
+        <div className="px-5 py-32 text-light-foreground dark:text-dark-foreground">
+          <p className="font-circular-web text-lg text-light-foreground dark:text-dark-foreground">
             America, 1899. The end of the Wild West era has begun. After a
             robbery goes badly wrong in the western town of Blackwater, Arthur
             Morgan and the Van der Linde gang are forced to flee. With federal

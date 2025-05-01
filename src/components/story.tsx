@@ -47,17 +47,20 @@ export const Story = () => {
   };
 
   return (
-    <section id="story" className="min-h-dvh w-screen bg-black text-blue-50">
+    <section
+      id="story"
+      className="min-h-screen w-screen bg-light-background text-light-foreground dark:bg-dark-background dark:text-dark-foreground"
+    >
       <div className="flex size-full flex-col items-center py-5 pb-24">
         <p className="font-general text-sm uppercase md:text-[10px]">
           the multiversal world
         </p>
-
+  
         <div className="relative size-full">
           <AnimatedTitle containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10">
             {"The St<b>o</b>ry of <br /> a hidden real<b>m</b>"}
           </AnimatedTitle>
-
+  
           <div className="story-img-container">
             <div className="story-img-mask">
               <div className="story-img-content">
@@ -73,21 +76,21 @@ export const Story = () => {
                 />
               </div>
             </div>
-
+  
             <RoundedCorners />
           </div>
         </div>
-
+  
         <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
           <div className="flex h-full w-fit flex-col items-center md:items-start">
-            <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
+            <p className="mt-3 max-w-sm text-center font-circular-web text-light-foreground dark:text-dark-foreground md:text-start">
               Set in the dying days of the Wild West, follow Arthur Morgan and
               the Van der Linde gang as they fight for survival against ruthless
               bounty hunters, the law, and their own fading ideals. In a world
               of betrayal, loyalty, and redemption, their story becomes one of
               the most epic and tragic tales ever told.
             </p>
-
+  
             <Button id="realm-button" containerClass="mt-5">
               Discover Prologue
             </Button>
@@ -96,4 +99,5 @@ export const Story = () => {
       </div>
     </section>
   );
+  
 };
