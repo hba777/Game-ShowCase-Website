@@ -27,6 +27,7 @@ const BentoTilt = ({
 
     setTransformStyle(newTransform);
   };
+
   const handleMouseLeave = () => {
     setTransformStyle("");
   };
@@ -53,19 +54,19 @@ interface BentoCardProps {
 const BentoCard = ({ src, title, description }: BentoCardProps) => {
   return (
     <article className="relative size-full">
-      <video
+      <img
         src={src}
-        loop
-        muted
-        autoPlay
+        alt="Feature"
         className="absolute left-0 top-0 size-full object-cover object-center"
       />
-
       <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
         <div>
-          <h1 className="bento-title special-font">{title}</h1>
+          <h1 className="bento-title special-font font-bold text-white">
+            {title}
+          </h1>{" "}
+          {/* Added font-bold and text-white classes here */}
           {description && (
-            <p className="tetx-xl mt-3 max-w-64 md:text-base">{description}</p>
+            <p className="mt-3 max-w-64 text-xl md:text-base">{description}</p>
           )}
         </div>
       </div>
@@ -79,25 +80,27 @@ export const Features = () => {
       <div className="container mx-auto px-3 md:px-10">
         <div className="px-5 py-32">
           <p className="font-circular-web text-lg text-blue-50">
-            Into the Metagame Layer
-          </p>
-
-          <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
-            Immerse yourself in a rich and ever-expanding universe where a
-            vibrant array of products converge into an interconnected overlay
-            experience on your world.
+            America, 1899. The end of the Wild West era has begun. After a
+            robbery goes badly wrong in the western town of Blackwater, Arthur
+            Morgan and the Van der Linde gang are forced to flee. With federal
+            agents and the best bounty hunters in the nation massing on their
+            heels, the gang must rob, steal, and fight their way across the
+            rugged heartland of America in order to survive. As deepening
+            internal divisions threaten to tear the gang apart, Arthur must make
+            a choice between his own ideals and loyalty to the gang who raised
+            him.
           </p>
         </div>
 
         <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
           <BentoCard
-            src="/videos/feature-1.mp4"
+            src="/Game-ShowCase-Website/img/feature-1.jpg" // Make sure the image is inside the public folder
             title={
               <>
-                radia<b>n</b>t
+                Black<b>w</b>ater
               </>
             }
-            description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
+            description="The botched heist that set everything in motion. A town that echoes with regret, betrayal, and fading loyalty."
           />
         </BentoTilt>
 
@@ -107,59 +110,38 @@ export const Features = () => {
         >
           <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
             <BentoCard
-              src="/videos/feature-2.mp4"
+              src="/Game-ShowCase-Website/img/feature-2.jpg" // Ensure image is in public folder
               title={
                 <>
-                  zig<b>m</b>a
+                  Va<b>n</b> der Linde
                 </>
               }
-              description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
+              description="Outlaws with a cause—or so they believed. The gang that once stood for freedom, slowly unraveling at the seams."
             />
           </BentoTilt>
 
           <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
             <BentoCard
-              src="/videos/feature-3.mp4"
+              src="/Game-ShowCase-Website/img/feature-3.png"
               title={
                 <>
-                  n<b>e</b>xus
+                  Art<b>h</b>ur
                 </>
               }
-              description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
+              description="A loyal enforcer caught in the middle of moral chaos. His journey is one of reflection, redemption, and reckoning."
             />
           </BentoTilt>
 
           <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
             <BentoCard
-              src="/videos/feature-4.mp4"
+              src="/Game-ShowCase-Website/img/feature-4.jpg"
               title={
                 <>
-                  az<b>u</b>l
+                  The <b>W</b>ild
                 </>
               }
-              description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
             />
           </BentoTilt>
-
-          {/* <BentoTilt className="bento-tilt_2">
-            <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
-              <h1 className="bento-title special-font max-w-64 text-black">
-                M<b>o</b>re co<b>m</b>ing so<b>o</b>n!
-              </h1>
-
-              <TiLocationArrow className="m-5 scale-[5] self-end" />
-            </div>
-          </BentoTilt>
-
-          <BentoTilt className="bento-tilt_2">
-            <video
-              src="/videos/feature-5.mp4"
-              loop
-              muted
-              autoPlay
-              className="size-full object-cover object-center"
-            />
-          </BentoTilt> */}
         </div>
       </div>
     </section>
