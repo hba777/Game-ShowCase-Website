@@ -21,7 +21,8 @@ export const Hero = () => {
     setCurrentIndex(upcomingVideoIndex);
   };
 
-  const getVideoSrc = (i: number) => `/videos/animations/hero-${i}.mp4`;
+  const getVideoSrc = (i: number) =>
+    `/Game-ShowCase-Website/videos/animations/hero-${i}.mp4`;
 
   const handleVideoLoad = () => {
     setLoadedVideos((prev) => prev + 1);

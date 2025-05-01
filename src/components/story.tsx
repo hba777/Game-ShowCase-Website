@@ -67,7 +67,7 @@ export const Story = () => {
                   onMouseUp={handleMouseLeave}
                   onMouseEnter={handleMouseLeave}
                   onMouseMove={handleMouseMove}
-                  src="/img/entrance.webp"
+                  src="/Game-ShowCase-Website/img/entrance.webp"
                   alt="Entrance"
                   className="object-contain"
                 />

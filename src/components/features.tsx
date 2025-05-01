@@ -94,7 +94,7 @@ export const Features = () => {
 
         <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
           <BentoCard
-            src="/img/feature-1.jpg" // Make sure the image is inside the public folder
+            src="/Game-ShowCase-Website/img/feature-1.jpg" // Make sure the image is inside the public folder
             title={
               <>
                 Black<b>w</b>ater
@@ -110,7 +110,7 @@ export const Features = () => {
         >
           <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
             <BentoCard
-              src="/img/feature-2.jpg" // Ensure image is in public folder
+              src="/Game-ShowCase-Website/img/feature-2.jpg" // Ensure image is in public folder
               title={
                 <>
                   Va<b>n</b> der Linde
@@ -122,7 +122,7 @@ export const Features = () => {
 
           <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
             <BentoCard
-              src="/img/feature-3.png" // Ensure image is in public folder
+              src="/Game-ShowCase-Website/img/feature-3.png"
               title={
                 <>
                   Art<b>h</b>ur
@@ -134,7 +134,7 @@ export const Features = () => {
 
           <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
             <BentoCard
-              src="/img/feature-4.jpg" // Ensure image is in public folder
+              src="/Game-ShowCase-Website/img/feature-4.jpg"
               title={
                 <>
                   The <b>W</b>ild
