@@ -13,11 +13,6 @@
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
-  "author": {
-    "name": "Sanidhya Kumar Verma",
-    "email": "sanidhya.verma12345@gmail.com",
-    "url": "https://github.com/sanidhyy"
-  },
   "description": "Modern UI/UX 3D Animated Gaming Website using React and GSAP",
   "keywords": [
     "reactjs",
@@ -45,26 +40,7 @@
     "js",
     "ts"
   ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sanidhyy/game-website.git"
-  },
-  "homepage": "https://github.com/sanidhyy/game-website#readme",
-  "bugs": {
-    "url": "https://github.com/sanidhyy/game-website/issues",
-    "email": "sanidhya.verma12345@gmail.com"
-  },
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/sanidhy"
-    },
-    {
-      "type": "Buy me a coffee",
-      "url": "https://www.buymeacoffee.com/sanidhy"
-    }
-  ],
+  "homepage": "https://hba777.github.io/Game-ShowCase-Website",
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "gsap": "^3.12.5",
