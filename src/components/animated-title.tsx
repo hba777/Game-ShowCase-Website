@@ -36,7 +36,7 @@ export const AnimatedTitle = ({
   }, []);
 
   return (
-    <div ref={containerRef} className={cn("animated-title", containerClass)}>
+    <div ref={containerRef} className={cn("animated-title text-light-foreground dark:text-dark-foreground", containerClass)}>
       {children
         ?.toString()
         .split("<br />")

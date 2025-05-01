@@ -1,7 +1,7 @@
+import { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-
 import { AnimatedTitle } from "./animated-title";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -27,13 +27,16 @@ export const About = () => {
   });
 
   return (
-    <div id="about" className="min-h-screen w-screen">
+    <div
+      id="about"
+      className="min-h-screen w-screen bg-light-background dark:bg-dark-background" // Tailwind classes for background
+    >
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-        <p className="font-general text-sm uppercase md:text-[10px]">
+        <p className="font-general text-sm uppercase md:text-[10px] text-light-foreground dark:text-dark-foreground">
           Welcome to our Adventure
         </p>
 
-        <AnimatedTitle containerClass="mt-5 !text-black text-center">
+        <AnimatedTitle containerClass="mt-5 text-center">
           {"Experience the epic Western adventures that defined a generation"}
         </AnimatedTitle>
       </div>

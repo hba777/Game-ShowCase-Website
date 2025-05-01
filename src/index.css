@@ -88,7 +88,7 @@ body.dark {
   }
 
   .animated-title {
-    @apply flex flex-col gap-1 text-7xl uppercase leading-[.8] text-white sm:px-32 md:text-[6rem];
+    @apply flex flex-col gap-1 text-7xl uppercase leading-[.8] text-light-foreground dark:text-dark-foreground sm:px-32 md:text-[6rem];
   }
 
   .animated-word {
