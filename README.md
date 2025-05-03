@@ -1,5 +1,3 @@
-# 3D Scuffed Gaming Website
-
 ## :toolbox: Getting Started
 
 1. Make sure **Git** and **NodeJS** is installed.
